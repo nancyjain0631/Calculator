@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    /* for displaying the boxes */
+    justify-content: center;
+    /* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).*/
+    align-items: center;
+    min-height: 100vh;
+    background: #22d1ee;
+    /* background: #00112c; */
+}
+
+.calculator {
+    position: relative;
+    /*the element is positioned relative to itself. However, an absolutely positioned element is relative to its parent.*/
+    display: grid;
+}
+
+.calculator .value {
+    grid-column: span 4;
+    height: 100px;
+    width: 240px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+    background: #b4f1f1;
+}
+
+.calculator span {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: whitesmoke;
+    background: #303a52;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+
+    place-items: center;
+
+}
+
+.calculator span:active {
+    background: #28c7fa;
+    color: #3f3b3b;
+}
+
+.calculator span.clear {
+    grid-column: span 2;
+    width: 120px;
+    background: #ff1f5a;
+}
+
+.calculator span.clear:active {
+    background: #21e6c1;
+}
+
+.calculator span.plus {
+    grid-row: span 2;
+    height: 120px;
+
+}
+
+.calculator span.equal {
+
+    background: #83e85a;
+    color: #3b5441;
+}
+
+.calculator span.equal:active {
+
+    background: #e41749;
+    color: white;
+}
+
+.calculator .divi,
+.calculator .mul,
+.calculator .sub,
+.calculator .plus {
+    background: #39a78e;
+}
